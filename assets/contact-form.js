@@ -1,0 +1,8 @@
+(() => {
+ const form=document.querySelector('#contact-form'); if(!form)return; const status=form.querySelector('.form-status'); const recipient='kasaishi.youtube.official@gmail.com';
+ const setStatus=(m,e=false)=>{status.textContent=m;status.classList.toggle('is-error',e)};
+ const validate=()=>{let ok=true;form.querySelectorAll('.field-error').forEach(x=>x.textContent='');form.querySelectorAll('[required]').forEach(f=>{if(!f.checkValidity()){ok=false;const err=f.closest('label')?.querySelector('.field-error');if(err)err.textContent=f.validity.typeMismatch?'正しい形式で入力してください。':f.validity.tooShort?`${f.minLength}文字以上で入力してください。`:'この項目を確認してください。';f.classList.add('is-invalid')}else f.classList.remove('is-invalid')});if(!ok){form.querySelector(':invalid')?.focus();setStatus('入力内容をご確認ください。',true)}return ok};
+ const text=()=>{const d=form.elements;return [`葛西記念財団 お問い合わせ`,`================================`,``,`お問い合わせ種別：${d.category.value}`,`お名前：${d.name.value.trim()}`,`団体名・所属：${d.organization.value.trim()||'未記入'}`,`メールアドレス：${d.email.value.trim()}`,`件名：${d.subject.value.trim()}`,``,`【お問い合わせ内容】`,d.message.value.trim(),``,`作成日時：${new Date().toLocaleString('ja-JP')}`].join('\n')};
+ form.addEventListener('submit',e=>{e.preventDefault();if(!validate())return;const d=form.elements;location.href=`mailto:${recipient}?subject=${encodeURIComponent('【'+d.category.value+'】'+d.subject.value.trim())}&body=${encodeURIComponent(text())}`;setStatus('メール作成画面を開きます。内容をご確認の上、送信してください。')});
+ form.querySelector('[data-contact-copy]')?.addEventListener('click',async()=>{if(!validate())return;try{await navigator.clipboard.writeText(text());setStatus('お問い合わせ内容をコピーしました。')}catch{setStatus('コピーできませんでした。メールアプリをご利用ください。',true)}});
+})();
