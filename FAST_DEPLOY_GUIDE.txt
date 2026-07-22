@@ -1,0 +1,23 @@
+葛西記念財団　最優先高速・安定版
+
+【構成】
+・全ページのCSSをHTML内に統合し、初期表示のCSS/JS追加通信を0件化
+・外部フォント、解析タグ、動画埋め込み、アニメーション、検索機能、PWAを廃止
+・トップ画像は遅延読み込み。最初の画面はHTMLだけで表示
+・旧Service Workerと旧キャッシュを自動解除
+・JavaScriptが失敗しても本文、メニュー、リンクを閲覧可能
+・スマホメニューはHTML標準のdetails要素で動作
+・YouTubeは直接リンク方式で、iframeを一切自動読み込みしない
+・全HTMLにSEOタイトル、説明、canonical、OGPを維持
+
+【重要】
+「接続まで長時間かかってエラー」になる場合、HTML容量よりDNS・HTTPS・GitHub Pages公開設定が原因である可能性が高いです。
+このZIPをリポジトリ直下へ上書きしたうえで、GitHub PagesのSettings > Pagesで次を確認してください。
+1. Sourceが正しいブランチ/rootになっている
+2. Custom domainが kasai-memorial-foundation.jp になっている
+3. DNS check successful の後、Enforce HTTPSを有効化
+4. CNAMEファイルがリポジトリ直下にあり、中身がドメイン1行だけ
+5. お名前.comの古いURL転送・不要なA/AAAA/CNAME・ワイルドカードを削除
+
+【アップロード方法】
+ZIP自体ではなく、解凍後の中身をリポジトリ直下へアップロードしてください。index.htmlが最上位に見える状態が正解です。

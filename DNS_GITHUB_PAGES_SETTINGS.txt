@@ -1,0 +1,63 @@
+葛西記念財団サイト　GitHub Pages / お名前.com 推奨DNS設定
+
+対象ドメイン：kasai-memorial-foundation.jp
+GitHubユーザー名：kmf-japan
+
+1. お名前.com DNS設定（ルートドメイン）
+ホスト名 @ または空欄に、次のAレコード4件を設定します。
+
+A 185.199.108.153
+A 185.199.109.153
+A 185.199.110.153
+A 185.199.111.153
+
+IPv6を使用する場合は、AAAAレコードを次の4件すべて正しく設定します。
+
+AAAA 2606:50c0:8000::153
+AAAA 2606:50c0:8001::153
+AAAA 2606:50c0:8002::153
+AAAA 2606:50c0:8003::153
+
+古い・誤ったAAAAレコードがあると、IPv6を優先するスマートフォン回線で接続が遅延または失敗する場合があります。
+正しく設定できない場合は、誤ったAAAAレコードを削除し、Aレコードだけにしてください。
+
+2. wwwを使用する場合
+
+ホスト名：www
+種類：CNAME
+値：kmf-japan.github.io
+
+wwwにAレコードとCNAMEを同時設定しないでください。
+
+3. 削除すべき可能性がある設定
+
+・古いサーバーを向いたA / AAAAレコード
+・URL転送設定
+・ワイルドカード（*）CNAME
+・同じホスト名に重複したCNAME
+・GitHub Pages以外を向いたAAAAレコード
+
+4. GitHub側
+
+Settings > Pages
+Custom domain：kasai-memorial-foundation.jp
+DNS check：Successful
+Enforce HTTPS：有効
+公開元：正しいブランチの /(root)
+
+5. リポジトリ直下
+
+CNAME
+index.html
+.nojekyll
+assets フォルダー
+その他のHTML
+
+CNAMEファイル名は必ず大文字で、中身は次の1行だけです。
+kasai-memorial-foundation.jp
+
+6. 更新後
+
+DNS反映には時間がかかることがあります。
+GitHubのDNSチェック完了後、HTTPS証明書の発行に時間がかかる場合があります。
+古い表示が残る端末では、一度ブラウザーのサイトデータを削除して再読み込みしてください。
