@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://kasai-memorial-foundation.jp/sitemap.xml
