@@ -3,8 +3,8 @@
   "short_name": "葛西財団",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#f7f4ed",
-  "theme_color": "#171512",
+  "background_color": "#f8f7ff",
+  "theme_color": "#312e81",
   "lang": "ja",
   "icons": [
     {

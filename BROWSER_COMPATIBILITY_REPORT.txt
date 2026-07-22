@@ -1,0 +1,51 @@
+葛西記念財団ホームページ　ブラウザー互換性対策報告
+====================================================
+
+対象
+----
+・Chrome / Edge / Firefox / Safari の現行版
+・iOS Safari / Android Chrome / Samsung Internet
+・旧Safari、旧Edgeなど一部機能が不足するブラウザー
+・Internet Explorer 11（簡易表示）
+・JavaScriptを無効にした閲覧環境（本文・リンクの閲覧）
+
+実装済み
+--------
+・CSS変数を固定値へコンパイルした cross-browser.css
+・AutoprefixerによるWebKit / Microsoft系プレフィックス
+・CSS Grid非対応時の縦並びレイアウト
+・clamp() / min() / aspect-ratio / inset 非対応時の固定値代替
+・backdrop-filter / conic-gradient / object-fit / sticky の代替表示
+・Flex gap非対応ブラウザーの余白補正
+・ES5形式JavaScript（アロー関数、optional chaining、async/await不使用）
+・closest / requestAnimationFrame / matchMedia等の軽量ポリフィル
+・Clipboard API非対応時のdocument.execCommandコピー
+・IE / 旧Edge向けmsSaveOrOpenBlob対応
+・JavaScript無効時の本文表示とモバイルメニュー常時表示
+・UTF-8、favicon.ico、Windowsタイル、Apple Touch Icon
+・Apache / IIS向けMIME・文字コード設定
+・Service Worker非対応時も通常閲覧できる構成
+・高コントラスト、キーボードフォーカス、印刷表示
+
+静的検査結果
+------------
+・HTMLファイル：14ページ
+・内部リンクおよび画像・CSS・JavaScript参照：欠落なし
+・重複ID：なし
+・CSS構文エラー：なし
+・JavaScript構文エラー：なし
+・ES2015以降の必須構文：不使用
+・cross-browser.css内のvar()参照：なし
+・Service Workerのキャッシュ対象ファイル：欠落なし
+
+表示上の方針
+------------
+ブラウザーごとに全く同じピクセル表示を保証するのではなく、対応機能が少ない環境では
+影、ぼかし、アニメーション、複数列レイアウトなどの装飾を自動的に簡略化し、本文、
+メニュー、画像、ボタン、フォームの可読性と操作性を優先します。
+
+制限
+----
+メーカーのサポートが終了した非常に古いブラウザー、ゲーム機・テレビ等の独自ブラウザー、
+通信事業者独自の簡易ブラウザーでは、JavaScript機能や装飾の一部が使用できない場合があります。
+その場合も主要な文章とリンクが表示されるように設計しています。

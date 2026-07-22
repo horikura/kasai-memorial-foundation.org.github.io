@@ -1,0 +1,259 @@
+@charset "UTF-8";
+/*
+  Compatibility and graceful-degradation layer.
+  Modern browsers keep the full visual design. Older engines receive a readable,
+  fully navigable stacked layout rather than a broken or invisible page.
+*/
+
+/* Content must remain visible when animation APIs or JavaScript are unavailable. */
+.no-intersectionobserver .reveal,
+.no-js .reveal { opacity: 1 !important; transform: none !important; }
+
+/* Browsers without backdrop-filter receive opaque surfaces. */
+.no-backdropfilter .premium-header,
+.no-backdropfilter .announcement-bar,
+.no-backdropfilter .mission-copy,
+.no-backdropfilter .hero-overline span,
+.no-backdropfilter .premium-button.ghost,
+.no-backdropfilter .hero-facts div,
+.no-backdropfilter .hero-caption,
+.no-backdropfilter .search-backdrop {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.no-backdropfilter .premium-header { background: #fffdf9 !important; }
+.no-backdropfilter .premium-button.ghost { background: #312e81 !important; }
+.no-backdropfilter .hero-facts div { background: #27254f !important; }
+.no-backdropfilter .hero-caption { background: #17152f !important; }
+
+/* Conic gradients are decorative; preserve the circle with a solid fallback. */
+.no-conicgradient .hero-circle {
+  background: #4338ca !important;
+  border: 5px solid #f59e0b !important;
+  padding: 0 !important;
+}
+
+/* Object-fit fallback. Images remain complete and proportionate. */
+.no-objectfit .hero-person,
+.no-objectfit .character,
+.no-objectfit .premium-brand img,
+.no-objectfit .footer-brand-premium img {
+  height: auto !important;
+  max-height: none !important;
+  object-fit: fill !important;
+}
+
+/* Sticky positioning is never essential to navigation. */
+.no-sticky .news-filter { position: static !important; top: auto !important; }
+
+/* CSS Grid fallback: stack content in document order. */
+.no-cssgrid .premium-nav-inner,
+.no-cssgrid .premium-hero-grid,
+.no-cssgrid .mission-grid,
+.no-cssgrid .program-grid,
+.no-cssgrid .history-showcase,
+.no-cssgrid .mini-timeline,
+.no-cssgrid .trust-grid,
+.no-cssgrid .dual-cta,
+.no-cssgrid .premium-footer-grid,
+.no-cssgrid .page-hero-inner,
+.no-cssgrid .page-layout,
+.no-cssgrid .join-intro-grid,
+.no-cssgrid .form-layout,
+.no-cssgrid .two-cols,
+.no-cssgrid .choice-grid,
+.no-cssgrid .value-grid,
+.no-cssgrid .principle-list,
+.no-cssgrid .disclosure-grid,
+.no-cssgrid .english-cards,
+.no-cssgrid .contact-premium-grid,
+.no-cssgrid .news-layout,
+.no-cssgrid .hero-facts,
+.no-cssgrid .search-results a,
+.no-cssgrid .profile-list > div,
+.no-cssgrid .document-links a,
+.no-cssgrid .footer-identity dl div {
+  display: block !important;
+}
+.no-cssgrid .premium-hero-copy,
+.no-cssgrid .premium-hero-visual,
+.no-cssgrid .mission-grid > *,
+.no-cssgrid .history-showcase > *,
+.no-cssgrid .trust-grid > *,
+.no-cssgrid .dual-cta > *,
+.no-cssgrid .premium-footer-grid > *,
+.no-cssgrid .form-layout > *,
+.no-cssgrid .join-intro-grid > *,
+.no-cssgrid .contact-premium-grid > *,
+.no-cssgrid .news-layout > * {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.no-cssgrid .program-card,
+.no-cssgrid .value-grid > div,
+.no-cssgrid .principle-list > div,
+.no-cssgrid .disclosure-grid article,
+.no-cssgrid .english-cards article,
+.no-cssgrid .mini-timeline li {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 20px !important;
+}
+.no-cssgrid .premium-nav a {
+  display: inline-block !important;
+  width: 16.3% !important;
+  min-width: 145px !important;
+  vertical-align: top !important;
+}
+.no-cssgrid .hero-facts div { display: inline-block !important; width: 31% !important; vertical-align: top !important; }
+.no-cssgrid .search-results a strong,
+.no-cssgrid .search-results a span,
+.no-cssgrid .search-results a i { display: block !important; margin-bottom: 5px; }
+.no-cssgrid .premium-footer-grid > * { margin-bottom: 36px !important; }
+
+/* Flexbox fallback for pre-flex engines. */
+.no-flexbox .wide-container,
+.no-flexbox .container { display: block !important; }
+.no-flexbox .announcement-bar .wide-container,
+.no-flexbox .brand-row,
+.no-flexbox .header-actions,
+.no-flexbox .hero-buttons,
+.no-flexbox .section-header-row,
+.no-flexbox .footer-bottom,
+.no-flexbox .document-toolbar,
+.no-flexbox .form-actions {
+  display: block !important;
+}
+.no-flexbox .header-actions,
+.no-flexbox .section-header-row > a { margin-top: 14px !important; }
+.no-flexbox .hero-buttons a,
+.no-flexbox .form-actions button,
+.no-flexbox .form-actions a { display: inline-block !important; margin: 0 10px 10px 0 !important; }
+
+/* Flex gap fallback for Safari 13 and older Chromium/Edge versions. */
+.no-flexgap .header-actions > *,
+.no-flexgap .hero-buttons > *,
+.no-flexgap .form-actions > *,
+.no-flexgap .document-toolbar > *,
+.no-flexgap .footer-nav-group > * { margin-right: 12px; margin-bottom: 10px; }
+.no-flexgap .premium-brand > img,
+.no-flexgap .footer-brand-premium > img { margin-right: 14px; }
+
+/* IE/old Edge text and control visibility fixes. */
+.no-cssvars body { color: #272b4d; background: #fffdf9; }
+.no-cssvars button,
+.no-cssvars input,
+.no-cssvars select,
+.no-cssvars textarea { color: #1d203d; background-color: #fff; }
+.no-cssvars .premium-button,
+.no-cssvars .header-cta,
+.no-cssvars .document-toolbar button,
+.no-cssvars .document-toolbar a,
+.no-cssvars .form-actions button,
+.no-cssvars .form-actions a { color: #1d203d; background-color: #fff; border-color: #4338ca; }
+.no-cssvars .premium-button.gold,
+.no-cssvars .premium-button.ink,
+.no-cssvars .header-cta { color: #fff !important; background-color: #4338ca !important; }
+.no-cssvars .premium-footer { background: #12110f; color: #fff; }
+.no-cssvars .premium-nav { background: #fff; }
+.no-cssvars .page-hero { background: #312e81; color: #fff; }
+.no-cssvars .field-error,
+.no-cssvars .form-status.is-error { color: #9f1515 !important; }
+
+/* High-contrast modes: remove visual effects that can hide text. */
+@media (-ms-high-contrast: active), (forced-colors: active) {
+  * { box-shadow: none !important; text-shadow: none !important; }
+  a, button, input, select, textarea { forced-color-adjust: auto; }
+  .premium-button, .header-cta, .document-toolbar button, .document-toolbar a { border: 2px solid currentColor !important; }
+  .hero-circle, .uc-ambient, .hero-pattern { display: none !important; }
+}
+
+@media screen and (max-width: 980px) {
+  .no-cssgrid .premium-nav a { width: 49% !important; min-width: 0 !important; }
+  .no-cssgrid .hero-facts div { width: 100% !important; display: block !important; }
+}
+@media screen and (max-width: 640px) {
+  .no-cssgrid .premium-nav a { width: 100% !important; }
+  .no-cssgrid .premium-hero-visual { min-height: 360px !important; }
+  .no-flexbox .hero-buttons a,
+  .no-flexbox .form-actions button,
+  .no-flexbox .form-actions a { display: block !important; width: 100% !important; margin-right: 0 !important; }
+}
+
+@media print {
+  .uc-ambient, .reading-progress, .premium-menu-button, .back-to-top, .search-dialog { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+[hidden] { display: none !important; }
+
+/* Fallbacks for CSS functions introduced after older Safari/Edge/IE releases. */
+.no-clamp .premium-hero h1 { font-size: 5rem; }
+.no-clamp .page-hero h1 { font-size: 4rem; }
+.no-clamp .section-title-block h2,
+.no-clamp .section-header-row h2,
+.no-clamp .section-title-centered h2,
+.no-clamp .trust-intro h2 { font-size: 3.5rem; }
+.no-clamp .hero-description,
+.no-clamp .large-copy { font-size: 1.15rem; }
+.no-clamp .section,
+.no-clamp .mission-section { padding-top: 100px; padding-bottom: 100px; }
+.no-clamp .search-panel { padding: 50px; }
+
+.no-cssminmax .wide-container {
+  width: calc(100% - 48px) !important;
+  max-width: 1380px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.no-cssminmax .container,
+.no-cssminmax .premium-site .container {
+  width: calc(100% - 48px) !important;
+  max-width: 1160px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.no-cssminmax .search-panel { width: calc(100% - 36px) !important; max-width: 760px !important; }
+.no-cssminmax .hero-circle { width: 610px !important; max-width: 45vw !important; }
+.no-cssminmax .hero-person { width: 100% !important; max-width: 660px !important; }
+
+.no-aspectratio .hero-circle { height: 610px !important; max-height: 45vw !important; }
+.no-aspectratio .character { height: auto !important; }
+
+.no-inset .reading-progress,
+.no-inset .uc-ambient,
+.no-inset .search-dialog,
+.no-inset .search-backdrop,
+.no-inset .premium-hero::before,
+.no-inset .hero-pattern { top: 0; right: 0; bottom: 0; left: 0; }
+.no-inset .premium-nav a::before,
+.no-inset .premium-button::before,
+.no-inset .announcement-bar::after { top: 0; right: 0; bottom: 0; left: 0; }
+
+/* Keyboard focus fallback for browsers without :focus-visible. */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+@media screen and (max-width: 760px) {
+  .no-clamp .premium-hero h1 { font-size: 2.8rem; }
+  .no-clamp .page-hero h1 { font-size: 2.6rem; }
+  .no-clamp .section-title-block h2,
+  .no-clamp .section-header-row h2,
+  .no-clamp .section-title-centered h2,
+  .no-clamp .trust-intro h2 { font-size: 2.25rem; }
+  .no-clamp .section,
+  .no-clamp .mission-section { padding-top: 70px; padding-bottom: 70px; }
+  .no-clamp .search-panel { padding: 42px 22px; }
+  .no-cssminmax .wide-container,
+  .no-cssminmax .container,
+  .no-cssminmax .premium-site .container { width: calc(100% - 28px) !important; }
+  .no-aspectratio .hero-circle { height: 100vw !important; max-height: none !important; }
+}

@@ -3,29 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="description" content="葛西記念財団の目的、事業、登録メンバー、役員、会議、会計、情報公開等を定めた団体運営規程です。">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no,email=no,address=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="msapplication-TileColor" content="#312e81">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <meta name="description" content="葛西記念財団の運営に必要な基本事項を簡潔に定めた規程です。">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#171512">
+  <meta name="theme-color" content="#312e81">
   <meta name="color-scheme" content="light">
-  <meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="葛西記念財団"><meta property="og:title" content="定款｜葛西記念財団"><meta property="og:description" content="葛西記念財団の目的、事業、登録メンバー、役員、会議、会計、情報公開等を定めた団体運営規程です。"><meta property="og:image" content="assets/og-image.png">
+  <meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="葛西記念財団"><meta property="og:title" content="定款｜葛西記念財団"><meta property="og:description" content="葛西記念財団の運営に必要な基本事項を簡潔に定めた規程です。"><meta property="og:image" content="assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>定款｜葛西記念財団</title>
+  <link rel="shortcut icon" href="assets/favicon.ico">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/cross-browser.css?v=20260723-crossbrowser-2">
+  <script>
+  (function (w, d) {
+    var h = d.documentElement;
+    function add(name) {
+      if ((" " + h.className + " ").indexOf(" " + name + " ") < 0) h.className += (h.className ? " " : "") + name;
+    }
+    function supportsValue(property, value) {
+      try { return !!(w.CSS && typeof w.CSS.supports === "function" && w.CSS.supports(property, value)); }
+      catch (error) { return false; }
+    }
+    add("js");
+    var style = h.style || {};
+    if (!supportsValue("--kmf-test", "0")) add("no-cssvars");
+    if (!supportsValue("display", "grid")) add("no-cssgrid");
+    if (!supportsValue("font-size", "clamp(1rem, 2vw, 2rem)")) add("no-clamp");
+    if (!supportsValue("width", "min(100%, 100px)")) add("no-cssminmax");
+    if (!supportsValue("aspect-ratio", "1 / 1")) add("no-aspectratio");
+    if (!("inset" in style)) add("no-inset");
+    var test = d.createElement("div").style;
+    test.display = "flex";
+    if (test.display !== "flex") add("no-flexbox");
+    if (!("objectFit" in style)) add("no-objectfit");
+    if (!(supportsValue("position", "sticky") || supportsValue("position", "-webkit-sticky"))) add("no-sticky");
+    if (!("backdropFilter" in style) && !("webkitBackdropFilter" in style)) add("no-backdropfilter");
+    if (!supportsValue("background-image", "conic-gradient(red, blue)")) add("no-conicgradient");
+    if (typeof w.IntersectionObserver !== "function") add("no-intersectionobserver");
+  })(window, document);
+  </script>
+  <link rel="stylesheet" href="assets/compatibility.css?v=20260723-crossbrowser-2">
+  <noscript><style>
+  .reveal{opacity:1!important;transform:none!important}
+  .search-dialog,.reading-progress,.back-to-top,.premium-menu-button,.search-open{display:none!important}
+  @media(max-width:980px){.premium-nav{display:block!important;position:static!important;max-height:none!important}.premium-nav-inner{display:block!important}.premium-nav a{display:block!important;width:100%!important}}
+  </style></noscript>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "葛西記念財団", "alternateName": "KASAI MEMORIAL FOUNDATION", "foundingDate": "2026-07-21", "address": {"@type": "PostalAddress", "addressLocality": "岐阜市", "addressRegion": "岐阜県", "addressCountry": "JP"}, "email": "kasaishi.youtube.official@gmail.com", "sameAs": ["https://youtube.com/channel/UCAfAnxhmhbJEMkUrAFyfKvg"]}</script>
-  
-  <script src="assets/site.js" defer></script>
+  <script src="assets/polyfills.js?v=20260723-crossbrowser-2"></script>
+  <script src="assets/site.js?v=20260723-crossbrowser-2" defer></script>
+  <script src="assets/ultimate-color.js?v=20260723-crossbrowser-2" defer></script>
   
 </head>
-<body data-page="teikan" class="premium-site ">
+<body data-page="teikan" class="premium-site ultimate-color">
 
 <a class="skip-link" href="#main">本文へ移動</a>
 <div class="reading-progress" aria-hidden="true"><span></span></div>
 <header class="premium-header" id="top">
   <div class="announcement-bar">
-    <div class="wide-container"><p><span>設立</span> 2026年7月21日　葛西の歴史と文化を、確かな記録として未来へ。</p><div><a href="english.html" lang="en">ENGLISH</a><button class="search-open" type="button" aria-haspopup="dialog" aria-controls="site-search"><span aria-hidden="true">⌕</span> サイト内検索</button></div></div>
+    <div class="wide-container"><p><span>設立</span> 2026年7月21日　葛西の歴史と文化を、確かな記録として未来へ。</p><div><a class="language-switch" href="english.html" lang="en" hreflang="en">ENGLISH</a><button class="search-open" type="button" aria-haspopup="dialog" aria-controls="site-search"><span aria-hidden="true">⌕</span> サイト内検索</button></div></div>
   </div>
   <div class="brand-row wide-container">
     <a class="premium-brand" href="index.html" aria-label="葛西記念財団 ホーム">
@@ -59,92 +102,54 @@
 <div class="container page-hero-inner reveal">
 <nav aria-label="パンくず" class="breadcrumb"><a href="index.html">ホーム</a><span aria-hidden="true">/</span><span>定款</span></nav>
 <p class="section-kicker">ARTICLES OF ORGANIZATION</p><h1>定款</h1>
-<p class="page-lead">葛西記念財団の目的、組織、意思決定、会計、情報公開に関する基本規程です。</p>
+<p class="page-lead">葛西記念財団の名称、目的、活動、役員、会計などを簡潔に定めた基本規程です。</p>
 <p class="revision">制定：2026年7月21日</p>
 </div>
 </section><div class="legal-status-note container"><strong>公開上の位置付け</strong><p>本ページは葛西記念財団の団体運営規程を「定款」として公開するものです。現時点で法人格を表示するものではありません。</p></div>
-<div class="container document-toolbar"><button type="button" data-print>定款を印刷・PDF保存</button><a href="#chapter1">本文を読む ↓</a></div>
+<div class="container document-toolbar"><button type="button" data-print>定款を印刷・PDF保存</button><a href="#chapter1">簡易定款を読む ↓</a></div>
 <section class="section white-section">
-<div class="container document-layout">
+<div class="container document-layout simple-charter-layout">
 <aside class="document-toc reveal">
 <p>目次</p>
-<a href="#chapter1">第1章 総則</a><a href="#chapter2">第2章 目的・事業</a><a href="#chapter3">第3章 登録メンバー</a><a href="#chapter4">第4章 役員</a><a href="#chapter5">第5章 会議</a><a href="#chapter6">第6章 資産・会計</a><a href="#chapter7">第7章 情報・権利</a><a href="#chapter8">第8章 倫理・安全</a><a href="#chapter9">第9章 変更・解散</a><a href="#supplement">附則</a>
+<a href="#chapter1">第1章　総則</a>
+<a href="#chapter2">第2章　目的と活動</a>
+<a href="#chapter3">第3章　役員とメンバー</a>
+<a href="#chapter4">第4章　運営と会計</a>
+<a href="#chapter5">第5章　変更と解散</a>
+<a href="#supplement">附則</a>
 </aside>
-<article class="charter reveal">
-<div class="legal-note"><strong>ご確認ください</strong><p>本ページは団体運営の基本規程として作成したウェブ掲載版です。法人登記、税務上の取扱い、寄附募集その他の法的手続を行う場合は、実際の組織形態と活動内容に合わせて司法書士、行政書士、税理士、弁護士等の専門家による確認を受けるものとします。</p></div>
-<header class="charter-title"><img alt="" height="72" src="assets/foundation-emblem.png" width="72"/><div><p>葛西記念財団</p><h2>定款（団体運営規程）</h2></div></header>
+<article class="charter reveal simple-charter">
+<div class="legal-note"><strong>簡易版について</strong><p>本定款は、葛西記念財団の現在の活動規模に合わせた簡潔な団体運営規程です。法人登記などの正式な法的手続に使用する場合は、組織形態に合わせた専門家の確認が必要です。</p></div>
+<header class="charter-title"><img alt="" height="72" src="assets/foundation-emblem.png" width="72"><div><p>葛西記念財団</p><h2>定款（簡易版）</h2></div></header>
 <section class="charter-chapter" id="chapter1"><h2>第1章　総則</h2>
 <h3>第1条（名称）</h3><p>本団体は、葛西記念財団（以下「本財団」という。）と称する。</p>
-<h3>第2条（主たる事務所）</h3><p>本財団は、主たる活動拠点を岐阜県岐阜市に置く。必要に応じて、役員会の決議により連絡拠点、支部又はオンライン上の活動拠点を置くことができる。</p>
-<h3>第3条（基本姿勢）</h3><p>本財団は、非営利性、公益性、正確性、透明性及び個人の尊厳を重んじ、特定の政治団体、宗教団体又は営利事業者の利益を図ることを主たる目的としない。</p>
-<h3>第4条（公告及び情報公開）</h3><p>本財団の定款、主要な活動方針その他公開すべき事項は、公式ウェブサイトその他適切な方法により公表する。</p>
+<h3>第2条（活動拠点）</h3><p>本財団の主たる活動拠点は、岐阜県岐阜市とする。</p>
 </section>
-<section class="charter-chapter" id="chapter2"><h2>第2章　目的及び事業</h2>
-<h3>第5条（目的）</h3><p>本財団は、葛西氏にまつわる歴史、文化、人物、地域の記録を収集、整理、保存、調査及び発信し、文化継承、教育、研究、交流及び地域への貢献に寄与することを目的とする。</p>
-<h3>第6条（事業）</h3><p>本財団は、前条の目的を達成するため、次の事業を行う。</p>
-<ol><li>歴史資料、写真、映像、音声、証言その他の記録の収集、整理及び保存</li><li>葛西氏、関連人物、地域史及び文化に関する調査研究</li><li>ウェブサイト、動画、出版物、展示その他の媒体による情報発信</li><li>講座、交流会、展示会、出展、表彰その他の文化事業</li><li>研究者、教育機関、地域団体、文化団体その他の関係者との連携</li><li>若い世代及び活動参加者の育成、支援及び交流機会の提供</li><li>前各号に附帯又は関連する事業</li></ol>
-<h3>第7条（事業年度計画）</h3><p>代表は、毎事業年度の開始前又は開始後速やかに、活動計画及び収支予算を作成し、役員会の承認を受ける。</p>
-<h3>第8条（事業の適正性）</h3><p>本財団は、事業の実施に当たり、関係法令、著作権、肖像権、個人情報保護及び資料提供者との合意を遵守する。</p>
+<section class="charter-chapter" id="chapter2"><h2>第2章　目的と活動</h2>
+<h3>第3条（目的）</h3><p>本財団は、葛西氏にまつわる歴史、文化、人物及び地域の記録を調べ、保存し、分かりやすく発信して次の世代へ伝えることを目的とする。</p>
+<h3>第4条（活動）</h3><p>本財団は、前条の目的を達成するため、次の活動を行う。</p>
+<ol><li>歴史資料、写真、映像、証言等の収集及び整理</li><li>葛西氏及び関連する地域史の調査</li><li>ホームページ、動画、展示等による情報発信</li><li>表彰、出展、交流及び学習に関する活動</li><li>その他、本財団の目的に必要な活動</li></ol>
 </section>
-<section class="charter-chapter" id="chapter3"><h2>第3章　登録メンバー</h2>
-<h3>第9条（登録メンバー制度）</h3><p>本財団は、活動を支援し又は活動に参加する者を「登録メンバー」として受け入れることができる。登録メンバーは、本財団の資産について持分又は分配請求権を有しない。</p>
-<h3>第10条（区分）</h3><p>登録メンバーの区分は、活動メンバー、広報協力メンバー、調査・記録メンバー、賛助メンバーその他役員会が定める区分とする。</p>
-<h3>第11条（加入）</h3><p>加入希望者は、所定のフォームにより申し込み、本財団の目的及び本定款に賛同し、代表又は代表が指定する担当者の承認を受けるものとする。</p>
-<h3>第12条（未成年者）</h3><p>未成年者が活動に参加する場合は、活動内容に応じて保護者の同意を求める。安全確保及び個人情報の取扱いには特に配慮する。</p>
-<h3>第13条（権利及び機会）</h3><p>登録メンバーは、定められた範囲で活動、研修、交流、提案その他の機会に参加できる。ただし、本財団の最終的な意思決定権は、本定款に定める機関に属する。</p>
-<h3>第14条（義務）</h3><p>登録メンバーは、本定款、個人情報保護、守秘義務、著作権及び活動上の安全ルールを守り、他者の尊厳を損なう行為をしてはならない。</p>
-<h3>第15条（退会）</h3><p>登録メンバーは、書面又は電子的方法による意思表示により、いつでも退会できる。</p>
-<h3>第16条（登録の停止又は取消し）</h3><p>登録メンバーが法令若しくは本定款に違反し、本財団の信用を著しく損ない、他者に危害若しくは迷惑を及ぼし、又は反社会的勢力との関係が判明したときは、代表は、必要な確認を行った上で登録を停止し又は取り消すことができる。</p>
+<section class="charter-chapter" id="chapter3"><h2>第3章　役員とメンバー</h2>
+<h3>第5条（役員）</h3><p>本財団に、代表1名、副代表1名以上、その他必要な担当者を置くことができる。</p>
+<h3>第6条（役員の職務）</h3><p>代表は本財団を代表し、活動全体を統括する。副代表は代表を補佐し、代表に支障がある場合はその職務を代行する。</p>
+<h3>第7条（メンバー）</h3><p>本財団の目的に賛同する者は、所定の申込みと承認によりメンバーとして活動に参加できる。メンバーは法令、本定款及び活動上のルールを守るものとする。</p>
 </section>
-<section class="charter-chapter" id="chapter4"><h2>第4章　役員</h2>
-<h3>第17条（役員）</h3><p>本財団に、次の役員を置く。</p><ol><li>代表　1名</li><li>副代表　1名以上</li><li>運営委員　若干名</li><li>監査担当　必要に応じ1名以上</li></ol>
-<h3>第18条（選任）</h3><p>代表及び副代表は、役員会において選任する。運営委員及び監査担当は、代表の推薦を受け、役員会の承認により選任する。</p>
-<h3>第19条（職務）</h3><p>代表は、本財団を代表し、業務を統括する。副代表は代表を補佐し、代表に事故があるとき又は欠けたときは、あらかじめ定めた順位によりその職務を代行する。運営委員は、担当事業を執行する。監査担当は、業務及び会計の状況を確認し、必要な意見を述べる。</p>
-<h3>第20条（任期）</h3><p>役員の任期は2年とし、再任を妨げない。補欠又は増員により選任された役員の任期は、他の在任役員の残任期間とする。</p>
-<h3>第21条（解任）</h3><p>役員が心身の事情により職務を遂行できないとき、職務上の義務に違反したとき、又は役員としてふさわしくない重大な事由があるときは、当該役員を除く役員会の3分の2以上の賛成により解任できる。</p>
-<h3>第22条（報酬及び費用）</h3><p>役員は原則として無報酬とする。ただし、役員会の承認により、業務に必要な実費又は合理的な対価を支給できる。この場合、利益相反を避け、内容を記録する。</p>
+<section class="charter-chapter" id="chapter4"><h2>第4章　運営と会計</h2>
+<h3>第8条（意思決定）</h3><p>重要な活動方針は、代表及び副代表その他の関係役員が協議して決定する。必要に応じてオンラインによる協議を行うことができる。</p>
+<h3>第9条（会計）</h3><p>本財団の収入及び支出は、活動目的に沿って適切に管理し、私的な目的に使用しない。</p>
+<h3>第10条（事業年度）</h3><p>本財団の事業年度は、毎年4月1日から翌年3月31日までとする。</p>
+<h3>第11条（情報と個人情報）</h3><p>本財団は、活動に必要な情報を適切に公開するとともに、個人情報、著作権、肖像権及び資料提供者の意向を尊重する。</p>
 </section>
-<section class="charter-chapter" id="chapter5"><h2>第5章　会議及び意思決定</h2>
-<h3>第23条（役員会）</h3><p>役員会は、本財団の重要事項を審議し、決定する最高意思決定機関とする。</p>
-<h3>第24条（開催）</h3><p>役員会は、代表が必要と認めたとき、又は役員の3分の1以上から議題を示して請求があったときに開催する。オンライン会議その他相互に意思確認できる方法による開催を認める。</p>
-<h3>第25条（招集）</h3><p>代表は、原則として開催日の7日前までに、日時、方法及び主な議題を役員に通知する。ただし、緊急かつ全役員の同意があるときは、この限りでない。</p>
-<h3>第26条（定足数及び決議）</h3><p>役員会は、議決権を有する役員の過半数の出席をもって成立し、出席者の過半数をもって決する。可否同数の場合は議長が決する。ただし、定款変更、解散及び役員解任は別に定める。</p>
-<h3>第27条（書面決議）</h3><p>代表が提案した事項について、議決権を有する役員全員が書面又は電磁的方法により同意したときは、役員会の決議があったものとみなす。</p>
-<h3>第28条（議事録）</h3><p>役員会の議事について、日時、出席者、議題、決議及び主要な意見を記載した議事録を作成し、適切に保存する。</p>
-<h3>第29条（利益相反）</h3><p>議案について特別の利害関係を有する役員は、その議決に加わることができない。利害関係の内容は議事録に記録する。</p>
-</section>
-<section class="charter-chapter" id="chapter6"><h2>第6章　資産及び会計</h2>
-<h3>第30条（資産）</h3><p>本財団の資産は、寄附金、助成金、事業収入、賛助金、物品、知的財産その他正当に取得した財産をもって構成する。</p>
-<h3>第31条（資産の管理）</h3><p>資産は代表が管理し、私的利用又は本財団の目的に反する使用をしてはならない。重要な資産の取得、処分又は長期の契約は役員会の承認を要する。</p>
-<h3>第32条（経費）</h3><p>本財団の経費は、本財団の資産をもって支弁する。支出は目的、金額、承認者及び証憑を記録し、適切に管理する。</p>
-<h3>第33条（事業年度）</h3><p>本財団の事業年度は、毎年4月1日に始まり翌年3月31日に終わる。</p>
-<h3>第34条（事業報告及び決算）</h3><p>代表は、事業年度終了後、事業報告及び収支決算を作成し、監査担当の確認を経て役員会の承認を受ける。</p>
-<h3>第35条（剰余金の分配禁止）</h3><p>本財団は、剰余金又は資産を役員、登録メンバーその他の個人に分配しない。</p>
-</section>
-<section class="charter-chapter" id="chapter7"><h2>第7章　情報、個人情報及び知的財産</h2>
-<h3>第36条（情報公開）</h3><p>本財団は、活動の信頼性を確保するため、定款、活動概要、主要な方針その他公開が適切な情報を公表する。ただし、個人情報、守秘義務を負う情報、安全上の支障がある情報は除く。</p>
-<h3>第37条（個人情報）</h3><p>本財団は、個人情報を利用目的の達成に必要な範囲で取得し、適切に管理する。本人の同意又は法令上の根拠なく第三者に提供しない。</p>
-<h3>第38条（資料及び著作物）</h3><p>提供された資料及び著作物は、提供条件、著作権、肖像権及び所有権を確認した上で利用する。権利の帰属が不明な場合は、公開範囲を制限し又は公開を見合わせる。</p>
-<h3>第39条（訂正及び異議申立て）</h3><p>公開情報について合理的な根拠を伴う訂正又は非公開の申出があった場合、本財団は内容を確認し、必要に応じて訂正、注記、公開停止その他の措置を講じる。</p>
-</section>
-<section class="charter-chapter" id="chapter8"><h2>第8章　倫理、安全及び禁止事項</h2>
-<h3>第40条（差別及び嫌がらせの禁止）</h3><p>本財団の活動において、差別、侮辱、威圧、嫌がらせ、暴力、つきまといその他他者の尊厳又は安全を害する行為を禁止する。</p>
-<h3>第41条（反社会的勢力の排除）</h3><p>本財団は、暴力団その他の反社会的勢力と関係を持たず、資金提供、便宜供与又は名義利用を認めない。</p>
-<h3>第42条（政治・宗教活動）</h3><p>本財団の名称、資産又は活動を利用して、特定の候補者、政党、宗教団体又は思想への支持若しくは反対を強要してはならない。</p>
-<h3>第43条（危機対応）</h3><p>事故、災害、情報漏えい、権利侵害その他重大な問題が生じた場合、代表は人命及び安全を最優先に対応し、事実確認、被害拡大防止、関係者への連絡及び再発防止を行う。</p>
-</section>
-<section class="charter-chapter" id="chapter9"><h2>第9章　定款の変更及び解散</h2>
-<h3>第44条（定款の変更）</h3><p>本定款は、議決権を有する全役員の3分の2以上の賛成により変更できる。変更内容及び施行日は、公式ウェブサイト等で公表する。</p>
-<h3>第45条（解散）</h3><p>本財団は、目的の達成が困難となったとき、その他やむを得ない事由があるとき、議決権を有する全役員の4分の3以上の賛成により解散できる。</p>
-<h3>第46条（残余財産）</h3><p>解散時の残余財産は、役員又は登録メンバーに分配せず、役員会の決議により、本財団と類似する非営利目的を有する団体又は公共的な機関へ寄附する。</p>
-<h3>第47条（細則）</h3><p>本定款の施行に必要な細則は、本定款に反しない範囲で役員会が定める。</p>
+<section class="charter-chapter" id="chapter5"><h2>第5章　変更と解散</h2>
+<h3>第12条（定款の変更）</h3><p>本定款は、代表及び副代表その他の関係役員の協議により変更することができる。</p>
+<h3>第13条（解散）</h3><p>本財団は、活動の継続が困難となった場合、関係役員の協議により解散することができる。</p>
 </section>
 <section class="charter-chapter supplement" id="supplement"><h2>附則</h2>
 <p>1　本定款は、2026年7月21日から施行する。</p>
 <p>2　設立時の代表は葛西寿史、副代表は葛西ひとみとする。</p>
-<p>3　設立初年度の事業年度は、2026年7月21日から2027年3月31日までとする。</p>
 </section>
-<div class="document-actions"><button class="button button-secondary" onclick="window.print()" type="button">定款を印刷する</button><a class="button button-primary" href="member.html">メンバー加入へ</a></div>
+<div class="document-actions"><button class="button button-secondary" type="button" data-print>定款を印刷する</button><a class="button button-primary" href="member.html">メンバー加入へ</a></div>
 </article>
 </div>
 </section>
