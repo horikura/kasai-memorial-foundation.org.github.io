@@ -1,0 +1,15 @@
+{
+  "build": "20260723-seo-speed-max-1",
+  "canonical": "https://kasai-memorial-foundation.jp/",
+  "page_count": 17,
+  "sitemap_urls": 17,
+  "index_html_bytes": 20797,
+  "index_html_gzip_estimate": 6635,
+  "css_bytes": 102277,
+  "css_gzip_estimate": 20423,
+  "js_bytes": 8313,
+  "js_gzip_estimate": 3613,
+  "mobile_lcp_avif_bytes": 12664,
+  "desktop_lcp_avif_bytes": 22575,
+  "external_requests_on_initial_home_load": 0
+}

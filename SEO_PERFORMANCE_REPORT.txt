@@ -1,0 +1,35 @@
+葛西記念財団  SEO・高速表示 最大強化版
+Build: 20260723-seo-speed-max-1
+Canonical: https://kasai-memorial-foundation.jp/
+
+【実装済みSEO】
+・全公開ページ固有のtitle / meta description
+・全公開ページの絶対URL canonical / og:url
+・Open Graph / Twitter Card（1200×630）
+・Organization / WebSite / WebPage / BreadcrumbList JSON-LD
+・お知らせ3件の独立URLとNewsArticle JSON-LD
+・XMLサイトマップ（17 URL）/ robots.txt / RSS 2.0
+・日本語トップと英語ページのhreflang / x-default
+・人間向けサイトマップ、説明的な内部リンク、404 noindex
+・最大画像プレビュー、無制限スニペット指定
+
+【高速化】
+・外部フォント、解析タグ、外部CSS/JSを初期表示で一切読み込まない
+・LCP人物画像をAVIF化：スマホ 12,664 bytes / PC 22,575 bytes
+・レスポンシブ画像をfetchpriority=highで先読み
+・共通CSSから未使用旧デザイン規則を削除：102,277 bytes（gzip概算 20,423 bytes）
+・共通JSはdefer：8,313 bytes（gzip概算 3,613 bytes）
+・YouTube iframeは操作時まで読み込まない
+・画面外描画の延期、画像サイズ固定、低速回線/データセーバー対応
+・軽量Service Workerは初回表示後に登録し、再訪問を高速化
+
+【GitHub Pages公開設定】
+1. ZIPを解凍し、中の全ファイルをリポジトリ main ブランチ直下へ上書きします。
+2. Settings → Pages → Deploy from a branch → main → /(root) を選択します。
+3. Custom domain は kasai-memorial-foundation.jp、Enforce HTTPS を有効にします。
+4. CNAMEファイルは削除せず、内容を kasai-memorial-foundation.jp のままにします。
+5. 公開後、Google Search Consoleでドメインプロパティを登録し、https://kasai-memorial-foundation.jp/sitemap.xml を送信します。
+
+【重要】
+SEOは検索1位を保証する仕組みではありません。技術設定だけでなく、独自の史料・調査記事・活動報告を継続的に公開し、信頼できる公的機関や関連団体から自然な紹介リンクを得ることが必要です。
+接続そのものが遅い、または開けない場合はHTMLではなくDNS・HTTPS証明書・GitHub Pages設定が原因になり得ます。
